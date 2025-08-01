@@ -544,40 +544,82 @@ footer {
   }
 }
 
+ /* Toggle button */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+      }
+
+      .nav-items,
+      .search,
+      .button {
+        display: none;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 10px 0;
+        text-align: center;
+        flex-direction: column;
+      }
+
+      header.active .nav-items,
+      header.active .search,
+      header.active .button {
+        display: flex;
+      }
+
+      .nav-items ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
 
   </style>
 </head>
 <body>
 
   <!-- HEADER -->
-    <header>
+  <header id="main-header">
     <div class="logo">
-        <img src="" alt="logo">
-        <h2>AI INSPECTOR</h2>
+      <img src="" alt="logo">
+      <h2>AI INSPECTOR</h2>
     </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
     <nav class="nav-items">
-        <ul>
-            <li><a href="index.html"> HOME</a></li>
-            <li><a href="#product">PRODUCTS</a></li>
-            <li><a href="#">SERVICE</a></li>
-            <li><a href="#contact">ABOUT</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#product">PRODUCTS</a></li>
+        <li><a href="#">SERVICE</a></li>
+        <li><a href="#contact">ABOUT</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
     </nav>
 
-<div class="search">
-    <i class="fa-solid fa-house home-icon"></i>
-    <input type="text" placeholder="Search...">
-    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-</div>
-
+    <div class="search">
+      <i class="fa-solid fa-house home-icon"></i>
+      <input type="text" placeholder="Search...">
+      <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
 
     <div class="button">
-        <button class="login"><a href="login.html">Login</a></button>
-        <button class="signup"><a href="signin.html">Sign Up</a></button>
+      <button class="login"><a href="login.html">Login</a></button>
+      <button class="signup"><a href="signin.html">Sign Up</a></button>
     </div>
-</header>
+  </header>
 
   <!-- HERO SECTION -->
   <section class="hero-section">
@@ -700,6 +742,12 @@ footer {
   <p>&copy; 2025 FEROMA. All rights reserved.</p>
 </div>
 
+  <script>
+     function toggleMenu() {
+      const header = document.getElementById('main-header');
+      header.classList.toggle('active');
+    }
+</script>
 
 </body>
 </html>
