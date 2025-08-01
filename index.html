@@ -418,6 +418,133 @@ footer {
   font-size: 14px;
 }
 
+    /* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  .glass-navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 20px;
+  }
+
+  .nav-items ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .search, .button {
+    margin-top: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.75rem;
+  }
+
+  .hero-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .product-container,
+  .about-company {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+  }
+
+  .product-image,
+  .product-info,
+  .about-company .img,
+  .about-company .content {
+    max-width: 100%;
+    flex: 1 1 100%;
+    padding: 10px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+/* Phones (up to 767px) */
+@media (max-width: 767px) {
+  .glass-navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .nav-items ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search input {
+    width: 160px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text h3 {
+    font-size: 1.1rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .product-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-buttons button {
+    width: 80%;
+  }
+
+  .about-company h1,
+  .product-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .footer-section h3 {
+    font-size: 18px;
+  }
+
+  .footer-section p,
+  .footer-section a {
+    font-size: 14px;
+  }
+
+  .rights {
+    font-size: 13px;
+  }
+}
+
+
   </style>
 </head>
 <body>
